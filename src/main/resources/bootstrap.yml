@@ -1,0 +1,10 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - refresh
+spring:
+  application:
+    name: ProductApplication  cloud:    config:      uri:      - http://${RDS_HOSTNAME:localhost}:4000
+      fail-fast: true
